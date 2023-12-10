@@ -1,0 +1,13 @@
+.top{
+    display : flex;
+    justify-content: space-between;
+    padding : 2vw;
+}
+
+.search-bar{
+    padding-top : 1vw;
+}
+.text-input{
+    padding-left : 2vw;
+    padding-right : 6vw;
+}

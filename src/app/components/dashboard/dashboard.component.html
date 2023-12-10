@@ -1,0 +1,78 @@
+<div class="search-bar">
+    <input type="text" [(ngModel)]="searchText" (input)="search($event)" placeholder="Search for any item" class="text-input">
+    <button (click)="searchbar()">Search</button>
+</div>
+<div class="container">
+    <div class="brandA">
+        <div class="column">
+            <div *ngFor="let item of filteredProducts">
+                <div class="card">
+                    <h6>{{ item.title }}</h6>
+                    <p>{{ item.price }}</p>
+                    <div class="ratings">
+                        <div class="price">
+                            <ng-container *ngFor="let star of getStarRating(item.rating.rate)">
+                                <span class="star" [ngClass]="star"></span>
+                            </ng-container>
+                        </div>
+                        <p>{{ item.rating.count }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="brandB">
+        <div class="column">
+            <div *ngFor="let item of brandA">
+                <div class="card">
+                    <h6>{{ item.title }}</h6>
+                    <p>{{ item.price }}</p>
+                    <div class="ratings">
+                        <div class="price">
+                            <ng-container *ngFor="let star of getStarRating(item.rating.rate)">
+                                <span class="star" [ngClass]="star"></span>
+                            </ng-container>
+                        </div>
+                        <p>{{ item.rating.count }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="brandC">
+        <div class="column">
+            <div *ngFor="let item of brandB">
+                <div class="card">
+                    <h6>{{ item.title }}</h6>
+                    <p>{{ item.price }}</p>
+                    <div class="ratings">
+                        <div class="price">
+                            <ng-container *ngFor="let star of getStarRating(item.rating.rate)">
+                                <span class="star" [ngClass]="star"></span>
+                            </ng-container>
+                        </div>
+                        <p>{{ item.rating.count }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="brandD">
+        <div class="column">
+            <div *ngFor="let item of brandC">
+                <div class="card">
+                    <h6>{{ item.title }}</h6>
+                    <p>{{item.price }}</p>
+                    <div class="ratings">
+                        <div class="price">
+                            <ng-container *ngFor="let star of getStarRating(item.rating.rate)">
+                                <span class="star" [ngClass]="star"></span>
+                            </ng-container>
+                        </div>
+                        <p>{{ item.rating.count }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

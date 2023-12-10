@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row">
+      <!-- Navbar -->
+      <div class="col">
+        <app-navbar></app-navbar>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-2"> <!-- Adjusted to col-md-2 for a smaller sidebar -->
+        <app-sidebar (formChange)="handleFormChange($event)"></app-sidebar>
+      </div>
+      <!-- Main Content Area -->
+      <div class="col-md-10"> <!-- Adjusted to col-md-10 for the main content area -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  
